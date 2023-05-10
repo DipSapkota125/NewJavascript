@@ -65,6 +65,130 @@
 // console.log(typeof z);
 
 //Strings method
-
 // const result = "My name is Lod Krishna!";
-// console.log(result[0]);
+//length
+// console.log(result.length);
+
+//concat
+// console.log(result.concat("Yekdin ta sabai janunai xa!"));
+
+//substring
+// console.log(result.substring(1, 4));
+// console.log(result.substr(1, 4));
+
+//replace
+// console.log(result.replace("is", "was"));
+
+//includes
+// console.log(result.includes("Lod"));
+
+//charAt
+// console.log(result.charAt(8));
+
+//indexof
+// console.log(result.indexOf("L"));
+
+//last index of
+// console.log(result.lastIndexOf("!"));
+
+//split
+// console.log(result.split(" "));
+
+//lowercase
+// console.log(result.toLowerCase());
+
+//uppercase
+// console.log(result.toUpperCase());
+
+//trim
+// console.log(result.trim());
+
+//statement(if else statement);
+// const email = "dipsapkota325@gmail.com";
+// const password = "9999999999";
+
+// if (email === "dipsapkota325@gmail.com" && password === "9999999999") {
+//   console.log("Login successfully!");
+// } else {
+//   console.log("Invalid credentials!");
+// }
+
+//simple arithmetic
+// let x = 10;
+
+// if (x > 15) {
+//   console.log("X is greater than 15!");
+// } else if (x > 5) {
+//   console.log("X is greater than 5, but not equal to 15!");
+// } else {
+//   console.log("X is not greater than 15!");
+// }
+
+// let weather = "cloudy";
+// if (weather === "sunny") {
+//   console.log("It's a sunny day!");
+// } else if (weather === "winter") {
+//   console.log("Aja dherai jado xa hai!");
+// } else if (weather === "rainy") {
+//   console.log("Aja pani parla jasto xa!");
+// } else if (weather === "cloudy") {
+//   console.log("Aja badal le akash dhakeko xa!");
+// } else {
+//   console.log("invalid weathers!");
+// }
+
+//switch statement
+
+// let grade = "A";
+// switch (grade) {
+//   case "B":
+//     console.log("Very good marks");
+//     break;
+//   case "C":
+//     console.log("good marks");
+//     break;
+//   case "D":
+//     console.log("average marks");
+//     break;
+//   case "E":
+//     console.log("need to improve");
+//     break;
+//   case "A":
+//     console.log("Excellent marks!");
+//     break;
+
+//   default:
+//     console.log("Fail vaye mah!");
+//     break;
+// }
+
+// let month = "october";
+// switch (month) {
+//   case "january":
+//   case "february":
+//   case "march":
+//     console.log("The month is in Q1");
+//     break;
+
+//   case "april":
+//   case "may":
+//   case "june":
+//     console.log("The month is in Q2");
+//     break;
+
+//   case "july":
+//   case "august":
+//   case "september":
+//     console.log("The month is in Q3");
+//     break;
+
+//   case "october":
+//   case "november":
+//   case "december":
+//     console.log("The month is in Q4");
+//     break;
+
+//   default:
+//     console.log("vetiyena hai narisau!");
+//     break;
+// }
