@@ -192,3 +192,118 @@
 //     console.log("vetiyena hai narisau!");
 //     break;
 // }
+
+//dom(document object model);
+const title = document.getElementById("mytitle");
+title.innerText = "Gajal tyo timro metauedeuna!";
+title.style.backgroundColor = "red";
+title.style.color = "white";
+title.style.cursor = "pointer";
+
+// loop
+//1.for loop
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+//sum of 10 positive numbers
+// let sum = 0;
+// for (let i = 1; i <= 10; i++) {
+//   sum += i;
+// }
+// console.log(sum);
+
+//while loop
+// let i = 1;
+// let sum = 0;
+
+// while (i <= 10) {
+//   sum += i;
+//   i++;
+// }
+// console.log(sum);
+
+//do while
+// let i = 0;
+// let sum = 0;
+// do {
+//   sum += i;
+//   i++;
+// } while (i <= 10);
+
+// console.log(sum);
+
+//array
+// const arr = [2, 4, 6, 7, 8, 9];
+// const arr1 = ["Ram", "shyam", "Hari"];
+// console.log(arr[2]);
+// console.log(arr1);
+
+// const arr = [7, 8, 3, 4, "Gita"];
+// console.log(arr);
+
+//array methods(basic array method);
+
+// const arr = [6, 3, 2, 8, 9, 5, 4, 1];
+//length
+// console.log(arr.length);
+
+//push
+// arr.push(23);
+// console.log(arr);
+
+//pop
+// arr.pop();
+// console.log(arr);
+
+// arr.shift();
+// console.log(arr);
+
+//unshift
+// arr.unshift(55);
+// console.log(arr);
+
+//includes
+// const newArr = arr.includes(8);
+
+// console.log(arr);
+// console.log(newArr);
+
+//reverse
+// arr.reverse();
+// console.log(arr);
+
+//splice
+// arr.splice(1, 3);
+// console.log(arr);
+
+//slice
+// const newArr = arr.slice(1, 4);
+// console.log(arr);
+// console.log(newArr);
+
+// const newArr = arr.filter((n) => n > 3);
+// console.log(arr);
+// console.log(newArr);
+
+// let arr = [];
+// for (let i = 0; i < 100; i++) {
+// arr[i] = i;
+//   arr.push(i);
+// }
+
+// console.log(arr);
+
+//object
+// const profile = {
+//   firstName: "Ram bahadur",
+//   lastName: "Badhal",
+//   age: 55,
+//   job: "minister",
+//   isSalary: 1000000,
+//   isSingle: function () {
+//     console.log("Luna sake luta deshlai!");
+//     return true;
+//   },
+// };
+// console.log(profile);
