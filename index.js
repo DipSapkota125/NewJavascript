@@ -194,11 +194,11 @@
 // }
 
 //dom(document object model);
-const title = document.getElementById("mytitle");
-title.innerText = "Gajal tyo timro metauedeuna!";
-title.style.backgroundColor = "red";
-title.style.color = "white";
-title.style.cursor = "pointer";
+// const title = document.getElementById("mytitle");
+// title.innerText = "Gajal tyo timro metauedeuna!";
+// title.style.backgroundColor = "red";
+// title.style.color = "white";
+// title.style.cursor = "pointer";
 
 // loop
 //1.for loop
@@ -307,3 +307,151 @@ title.style.cursor = "pointer";
 //   },
 // };
 // console.log(profile);
+
+//function
+// function name() {
+//   console.log("Ram bahadur");
+// }
+// name();
+
+// function add() {
+//   let x = 9;
+//   let y = 8;
+//   let ans = x + y;
+//   console.log(ans);
+// }
+// add();
+
+//parameters & argument in function
+// function sum(a=4, b=6, c=2) {
+//   let result = a + b + c / 2;
+//   console.log(result);
+// }
+// sum(9, 6,4);
+
+// function sum(a, b) {
+//   let ans = a + b;
+//   return ans;
+// }
+
+// const result = sum(5, 8);
+// console.log(result);
+
+//
+// function greeting(name, address) {
+//   console.log(`My name is ${name}. I live at ${address}`);
+// }
+// greeting("Top", "Sindhuli");
+
+// function add(arr = []) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
+
+// const ans = add([8, 9, 3, 5, 2, 7, 9, 3, 4]);
+// console.log(ans);
+
+//scoping
+// var x = 9;
+
+// console.log(x);
+
+// function scope() {
+//   let y = 8 + 8;
+//   console.log(x);
+//   console.log(y);
+// }
+// scope
+// const result = document.getElementById("myLife");
+// const ans = document.getElementsByClassName("myHow");
+// const view = document.getElementsByClassName("myYour");
+// const email = document.getElementsByName("email");
+// const tag = document.getElementsByTagName("span");
+// const button = document.getElementById("myClick");
+// const lol = document.querySelector("#myLife");
+// const h2 = document.createElement("h2");
+
+// lol.innerHTML = "Baklol";
+// ans[0].innerHTML = "Why";
+// view[0].innerHTML = "Our";
+// tag[0].innerText = "Guithe";
+
+// button.style.backgroundColor = "blue";
+// button.style.padding = "2vmax 4vmax";
+// button.style.color = "white";
+
+// const deleteBtn = document.querySelectorAll("button");
+
+// function Adding() {
+//   const h2 = document.createElement("h1");
+//   h2.innerHTML = "Yuwa harulai bahira jana nadinunai ajako priority ho!";
+//   document.body.prepend(h2);
+// }
+
+// function deleting() {
+//   const trash = document.querySelector("h1");
+//   trash.remove();
+// }
+
+// button.onclick = Adding;
+// deleteBtn[1].onclick = deleting;
+
+// const arr = [6, 8, 3, 5, 2, 9];
+
+// console.log(
+//   arr.filter((value, index) => {
+//     if (value > 4) {
+//       return value;
+//     }
+//   })
+// );
+
+//DOM Manipulation
+const myHow = document.getElementById("how");
+const myIs = document.getElementsByClassName("is");
+const myInput = document.getElementsByName("email");
+const mySpan = document.getElementsByTagName("span");
+const meroDesh = document.querySelector("#nepal");
+const myButton = document.querySelector(".hey");
+const DeleteButton = document.querySelectorAll("button");
+
+//mybutton
+myButton.style.backgroundColor = "purple";
+myButton.style.color = "white";
+myButton.style.padding = "2vmax 4vmax";
+myButton.style.cursor = "pointer";
+// const newData = myattr.getAttribute("class");
+// const newSay = myattr.setAttribute("class", "say");
+
+// console.log(newData);
+// console.log(newSay);
+
+//for id
+myHow.innerHTML = "Why";
+myHow.style.backgroundColor = "Red";
+myHow.style.color = "white";
+
+//for class
+myIs[0].innerHTML = "Hello";
+
+//using function
+function myAdd() {
+  const newH1 = document.createElement("h1");
+  newH1.innerHTML = "Yubalai bidesh jana bata rokaum!";
+
+  document.body.prepend(newH1);
+}
+
+function DelBtn() {
+  const trash = document.querySelector("h1");
+  trash.remove();
+}
+
+myButton.onclick = myAdd;
+DeleteButton[1].onclick = DelBtn;
+DeleteButton[1].style.backgroundColor = "red";
+DeleteButton[1].style.color = "white";
+DeleteButton[1].style.padding = "2vmax 4vmax";
