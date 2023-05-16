@@ -410,19 +410,19 @@
 // );
 
 //DOM Manipulation
-const myHow = document.getElementById("how");
-const myIs = document.getElementsByClassName("is");
-const myInput = document.getElementsByName("email");
-const mySpan = document.getElementsByTagName("span");
-const meroDesh = document.querySelector("#nepal");
-const myButton = document.querySelector(".hey");
-const DeleteButton = document.querySelectorAll("button");
+// const myHow = document.getElementById("how");
+// const myIs = document.getElementsByClassName("is");
+// const myInput = document.getElementsByName("email");
+// const mySpan = document.getElementsByTagName("span");
+// const meroDesh = document.querySelector("#nepal");
+// const myButton = document.querySelector(".hey");
+// const DeleteButton = document.querySelectorAll("button");
 
 //mybutton
-myButton.style.backgroundColor = "purple";
-myButton.style.color = "white";
-myButton.style.padding = "2vmax 4vmax";
-myButton.style.cursor = "pointer";
+// myButton.style.backgroundColor = "purple";
+// myButton.style.color = "white";
+// myButton.style.padding = "2vmax 4vmax";
+// myButton.style.cursor = "pointer";
 // const newData = myattr.getAttribute("class");
 // const newSay = myattr.setAttribute("class", "say");
 
@@ -430,28 +430,88 @@ myButton.style.cursor = "pointer";
 // console.log(newSay);
 
 //for id
-myHow.innerHTML = "Why";
-myHow.style.backgroundColor = "Red";
-myHow.style.color = "white";
+// myHow.innerHTML = "Why";
+// myHow.style.backgroundColor = "Red";
+// myHow.style.color = "white";
 
 //for class
-myIs[0].innerHTML = "Hello";
+// myIs[0].innerHTML = "Hello";
 
 //using function
-function myAdd() {
-  const newH1 = document.createElement("h1");
-  newH1.innerHTML = "Yubalai bidesh jana bata rokaum!";
+// function myAdd() {
+//   const newH1 = document.createElement("h1");
+//   newH1.innerHTML = "Yubalai bidesh jana bata rokaum!";
 
-  document.body.prepend(newH1);
-}
+//   document.body.prepend(newH1);
+// }
 
-function DelBtn() {
-  const trash = document.querySelector("h1");
-  trash.remove();
-}
+// function DelBtn() {
+//   const trash = document.querySelector("h1");
+//   trash.remove();
+// }
 
-myButton.onclick = myAdd;
-DeleteButton[1].onclick = DelBtn;
-DeleteButton[1].style.backgroundColor = "red";
-DeleteButton[1].style.color = "white";
-DeleteButton[1].style.padding = "2vmax 4vmax";
+// myButton.onclick = myAdd;
+// DeleteButton[1].onclick = DelBtn;
+// DeleteButton[1].style.backgroundColor = "red";
+// DeleteButton[1].style.color = "white";
+// DeleteButton[1].style.padding = "2vmax 4vmax";
+
+//ADVANCE ARRAY METHOD
+// const arr = [6, 3, 7, 9, 8, 2, 5, 4];
+
+//find method
+// console.log(
+//   arr.find((value, index) => {
+//     if (value > 4) return value;
+//   })
+// );
+
+//filter method
+// console.log(
+//   arr.filter((value, index) => {
+//     if (value > 4) return value;
+//   })
+// );
+
+//every method
+// console.log(
+//   arr.every((value, index) => {
+//     if (value > 4) return value;
+//   })
+// );
+
+//some method
+// console.log(
+//   arr.some((value, index) => {
+//     if (value > 4) return value;
+//   })
+// );
+
+//for each (it iterate main array only not return any new array);
+//map(it returns new array after iterating main array)
+
+// const result = arr.forEach((value, index) => {
+//   return (value += 20);
+// });
+// console.log(result);
+// console.log(arr);
+
+// const result = arr.map((value, index) => {
+//   return (value += 20);
+// });
+// console.log(result);
+// console.log(arr);
+
+//reduce method;
+
+// const newArr = arr.reduce((prevValue, value, index) => {
+//   return (prevValue += value);
+// });
+
+// console.log(newArr);
+
+//events listeners
+const Btn = document.querySelector(".hey");
+Btn.addEventListener("click", () => {
+  alert(`My name is Ram Thapa!`);
+});
