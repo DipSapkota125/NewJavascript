@@ -511,7 +511,57 @@
 // console.log(newArr);
 
 //events listeners
-const Btn = document.querySelector(".hey");
+// const Btn = document.querySelector(".hey");
+// Btn.addEventListener("click", () => {
+//   alert(`My name is Ram Thapa!`);
+// });
+
+//AddEvents Listeners
+const myTitle = document.getElementsByClassName("title");
+const Box = document.getElementsByTagName("span");
+const Btn = document.getElementById("heyclick");
+const MyInput = document.querySelector("input");
+
+Box[0].style.padding = "20px";
+Box[0].style.backgroundColor = "purple";
+Box[0].style.color = "white";
+
+Btn.style.padding = "2vmax 4vmax";
+Btn.style.backgroundColor = "Orange";
+Btn.style.color = "white";
+
 Btn.addEventListener("click", () => {
-  alert(`My name is Ram Thapa!`);
+  myTitle[0].innerHTML = "Haina k ho yesto yo Chakka parchu";
+  myTitle[0].classList.add("myBox");
+});
+
+Box[0].addEventListener("mouseover", () => {
+  myTitle[0].style.backgroundColor = "Yellow";
+  Btn.style.transform = "scale(1.1)";
+});
+
+Box[0].addEventListener("mouseout", () => {
+  myTitle[0].style.backgroundColor = "red";
+  Btn.style.transform = "";
+});
+
+Btn.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  Btn.style.backgroundColor = "crimson";
+});
+
+addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  Btn.style.filter = "blur(10px)";
+});
+
+Box[0].addEventListener("dblclick", () => {
+  document.body.style.backgroundColor = "black";
+});
+Box[0].addEventListener("click", () => {
+  document.body.style.backgroundColor = "white";
+});
+
+MyInput.addEventListener("change", (e) => {
+  console.log(e.target.value);
 });
