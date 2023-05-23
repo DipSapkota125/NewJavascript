@@ -517,51 +517,146 @@
 // });
 
 //AddEvents Listeners
-const myTitle = document.getElementsByClassName("title");
-const Box = document.getElementsByTagName("span");
-const Btn = document.getElementById("heyclick");
-const MyInput = document.querySelector("input");
+// const myTitle = document.getElementsByClassName("title");
+// const Box = document.getElementsByTagName("span");
+// const Btn = document.getElementById("heyclick");
+// const MyInput = document.querySelector("input");
 
-Box[0].style.padding = "20px";
-Box[0].style.backgroundColor = "purple";
-Box[0].style.color = "white";
+// Box[0].style.padding = "20px";
+// Box[0].style.backgroundColor = "purple";
+// Box[0].style.color = "white";
 
-Btn.style.padding = "2vmax 4vmax";
-Btn.style.backgroundColor = "Orange";
-Btn.style.color = "white";
+// Btn.style.padding = "2vmax 4vmax";
+// Btn.style.backgroundColor = "Orange";
+// Btn.style.color = "white";
 
-Btn.addEventListener("click", () => {
-  myTitle[0].innerHTML = "Haina k ho yesto yo Chakka parchu";
-  myTitle[0].classList.add("myBox");
-});
+// Btn.addEventListener("click", () => {
+//   myTitle[0].innerHTML = "Haina k ho yesto yo Chakka parchu";
+//   myTitle[0].classList.add("myBox");
+// });
 
-Box[0].addEventListener("mouseover", () => {
-  myTitle[0].style.backgroundColor = "Yellow";
-  Btn.style.transform = "scale(1.1)";
-});
+// Box[0].addEventListener("mouseover", () => {
+//   myTitle[0].style.backgroundColor = "Yellow";
+//   Btn.style.transform = "scale(1.1)";
+// });
 
-Box[0].addEventListener("mouseout", () => {
-  myTitle[0].style.backgroundColor = "red";
-  Btn.style.transform = "";
-});
+// Box[0].addEventListener("mouseout", () => {
+//   myTitle[0].style.backgroundColor = "red";
+//   Btn.style.transform = "";
+// });
 
-Btn.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  Btn.style.backgroundColor = "crimson";
-});
+// Btn.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   Btn.style.backgroundColor = "crimson";
+// });
 
-addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  Btn.style.filter = "blur(10px)";
-});
+// addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   Btn.style.filter = "blur(10px)";
+// });
 
-Box[0].addEventListener("dblclick", () => {
-  document.body.style.backgroundColor = "black";
-});
-Box[0].addEventListener("click", () => {
-  document.body.style.backgroundColor = "white";
-});
+// Box[0].addEventListener("dblclick", () => {
+//   document.body.style.backgroundColor = "black";
+// });
+// Box[0].addEventListener("click", () => {
+//   document.body.style.backgroundColor = "white";
+// });
 
-MyInput.addEventListener("change", (e) => {
-  console.log(e.target.value);
-});
+// MyInput.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+// });
+
+//Math Object
+// const ans = Math.round(4.6);
+// console.log(ans);
+
+// const ans = Math.floor(4.6);
+// console.log(ans);
+
+// const ans = Math.ceil(4.2);
+// console.log(ans);
+
+// const ans = Math.trunc(3.123);
+// console.log(ans);
+
+// const ans = Math.pow(2, 3);
+// console.log(ans);
+
+// const ans = Math.sqrt(625);
+// console.log(ans);
+
+// const ans = Math.abs(-21);
+// console.log(ans);
+
+// function myFunc(a, b) {
+//   return Math.abs(a - b);
+// }
+
+// console.log(myFunc(2, 9));
+
+// const ans = Math.random() * 10;
+// console.log(ans);
+
+// const ans = Math.max(6, 9, 45);
+// console.log(ans);
+
+// const ans = Math.sin((90 * Math.PI) / 180);
+// console.log(ans);
+
+// const ans = Math.sin((30 * Math.PI) / 180);
+// console.log(ans);
+
+//Date
+// const date = new Date();
+// console.log(date.getTime());
+// console.log(date.toISOString());
+// console.log(date.getFullYear());
+// console.log(date.getMonth());
+// console.log(date.getDay());
+
+//
+// const Text = document.getElementById("myText");
+// const Add = document.getElementById("myAdd");
+// const Delete = document.getElementById("myDelete");
+
+// Add.style.backgroundColor = "green";
+// Add.style.color = "white";
+// Add.style.padding = "20px";
+// Add.style.cursor = "pointer";
+// Add.style.border = "none";
+
+// Delete.style.backgroundColor = "red";
+// Delete.style.color = "white";
+// Delete.style.padding = "20px";
+// Delete.style.cursor = "pointer";
+// Delete.style.border = "none";
+
+// const myAdd = () => {
+//   localStorage.setItem(
+//     "key",
+//     JSON.stringify({ name: "Ram", age: 23, gender: "male" })
+//   );
+// };
+// Add.addEventListener("click", myAdd);
+// Delete.addEventListener("click", () => {
+// localStorage.removeItem("key");
+//   localStorage.clear();
+// });
+
+// if (localStorage.getItem("key")) {
+//   console.log(JSON.parse(localStorage.getItem("key")));
+// }
+
+function appendToResult(value) {
+  document.getElementById("result").value += value;
+}
+
+function calculateResult() {
+  const result = document.getElementById("result").value;
+  const calculatedResult = eval(result);
+  document.getElementById("result").value = calculatedResult;
+}
+
+function clearResult() {
+  document.getElementById("result").value = "";
+}

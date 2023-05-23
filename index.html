@@ -6,22 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./index.css" />
-
-    <style>
-      .myBox{
-        padding:30px;
-        background-color: red;
-        cursor: pointer;
-        color:white
-      }
-    </style>
   </head>
   <body>
-    <h1 class="title">Me After getting my 0 balance in my phone</h1>
-    <span>Box 1</span><br></br><br></br>
-    <button id="heyclick">Click me</button>
-    <input type="text" name="email" />
+    <div class="calculator">
+      <input type="text" id="result" readonly />
+      <table>
+        <tr>
+          <td><button onclick="clearResult()">C</button></td>
+          <td><button onclick="appendToResult('/')">/</button></td>
+          <td><button onclick="appendToResult('*')">x</button></td>
+          <td><button onclick="appendToResult('7')">7</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendToResult('8')">8</button></td>
+          <td><button onclick="appendToResult('9')">9</button></td>
+          <td><button onclick="appendToResult('-')">-</button></td>
+          <td><button onclick="appendToResult('4')">4</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendToResult('5')">5</button></td>
+          <td><button onclick="appendToResult('6')">6</button></td>
+          <td><button onclick="appendToResult('+')">+</button></td>
+          <td><button onclick="appendToResult('1')">1</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendToResult('2')">2</button></td>
+          <td><button onclick="appendToResult('3')">3</button></td>
+          <td><button onclick="calculateResult()">=</button></td>
+          <td><button onclick="appendToResult('0')">0</button></td>
+        </tr>
+      </table>
 
-    <script src="./index.js"></script>
+      <script src="./index.js"></script>
+    </div>
   </body>
 </html>
