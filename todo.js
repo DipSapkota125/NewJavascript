@@ -7,8 +7,6 @@ let tasks = localStorage.getItem("tasks")
   ? JSON.parse(localStorage.getItem("tasks"))
   : [];
 ShowAllTasks();
-
-ShowAllTasks();
 function ShowAllTasks() {
   tasks.forEach((value, index) => {
     const div = document.createElement("div");
@@ -33,7 +31,6 @@ function ShowAllTasks() {
       removeTasks();
       tasks.splice(index, 1);
       localStorage.setItem("tasks", JSON.stringify(tasks));
-
       ShowAllTasks();
     });
 
@@ -51,10 +48,12 @@ function removeTasks() {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   removeTasks();
+
   tasks.push({
     title: title.value,
     description: description.value,
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
+
   ShowAllTasks();
 });

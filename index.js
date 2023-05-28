@@ -646,17 +646,225 @@
 // if (localStorage.getItem("key")) {
 //   console.log(JSON.parse(localStorage.getItem("key")));
 // }
+// const Btn = document.querySelector("button");
+// const greeting = (name, age, income) => {
+//   console.log(
+//     `my name is ${name}. I am ${age} year old & my income is only ${income}`
+//   );
+// };
 
-function appendToResult(value) {
-  document.getElementById("result").value += value;
+// const id = setInterval(greeting, 1000, "Dip", 23, 25000);
+
+// Btn.addEventListener("click", () => {
+//   clearInterval(id);
+// });
+
+//SetTimeout and SetInterval;
+
+// setTimeout(() => {
+//   console.log("Hello world!");
+// }, 5000);
+
+// setInterval(() => {
+//   console.log("Hello world!");
+// }, 2000);
+
+// const Btn = document.querySelector("button");
+// const greeting = (name, age, income) => {
+//   console.log(`My name is ${name}.My age is:${age} and my income is:${income}`);
+// };
+
+// const closeTime = setInterval(greeting, 2000, "Ram", 23, 50000);
+
+// Btn.addEventListener("click", () => {
+//   clearInterval(closeTime);
+// });
+
+//OOP concept
+
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+//   this.deposit = function (amount) {
+//     this.balance += amount;
+//   };
+
+//   this.withdraw = function (amount) {
+//     this.balance -= amount;
+//   };
+// }
+
+// const ramAccount = new BankAccount("Ram", 1000);
+// const hariAccount = new BankAccount("Hari");
+
+// ramAccount.deposit(5000);
+// ramAccount.withdraw(2000);
+// console.log(ramAccount);
+
+//OOP in javascript
+
+// function BankAccount(customerName, balance = 0) {
+//   this.customerName = customerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+
+// this.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// this.reduce = function (amount) {
+//   this.balance -= amount;
+// };
+// }
+// const sitaAccount = new BankAccount("Sita", 4000);
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+// sitaAccount.deposit(5000);
+// console.log(sitaAccount);
+
+// const myForm = document.querySelector("#myForm");
+// const customername = document.querySelector("#customername");
+// const balance = document.querySelector("#balance");
+
+// const DepositForm = document.querySelector("#depositForm");
+// const accountNumber = document.querySelector("#accountnumber");
+// const amount = document.querySelector("#amount");
+
+// let accounts = [];
+// myForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const newAccount = new BankAccount(customername.value, +balance.value);
+//   accounts.push(newAccount);
+//   console.log(accounts);
+// });
+
+// DepositForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = accounts.find(
+//     (item) => item.accountNumber === +accountNumber.value
+//   );
+//   if (account) {
+//     account.deposit(+amount.value);
+//     console.log(accounts);
+//   }
+// });
+
+// const ramAccount = new BankAccount("Ram", 9000);
+// const hariAccount = new BankAccount("hari", 8000);
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// ramAccount.deposit(7000);
+// ramAccount.withdraw(5000);
+// hariAccount.deposit(4000);
+// console.log(ramAccount);
+// console.log(hariAccount);
+
+// const ramAccount = new BankAccount("Ram", 6000);
+// const hariAccount = new BankAccount("Hari");
+
+// console.log(ramAccount);
+// console.log(hariAccount);
+// const myForm = document.querySelector("#myForm");
+// const customername = document.querySelector("#customername");
+// const balance = document.querySelector("#balance");
+
+// const depositForm = document.querySelector("#depositForm");
+// const accountNumber = document.querySelector("#accountnumber");
+// const amount = document.querySelector("#amount");
+
+// let accounts = [];
+// myForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const neObj = new BankAccount(customername.value, +balance.value);
+//   accounts.push(neObj);
+//   console.log(accounts);
+// });
+
+// depositForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const account = accounts.find(
+//     (item) => item.accountNumber === +accountNumber.value
+//   );
+//   if (account) {
+//     account.deposit(+amount.value);
+//     console.log(accounts);
+//   }
+// });
+
+// class BankAccount {
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.accountNumber = Date.now();
+//     this.balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
+
+// const ramAccount = new BankAccount("ram", 5000);
+// ramAccount.deposit(4000);
+// console.log(ramAccount);
+
+//class in javascript
+
+// class BankAccount {
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.accountNumber = Date.now();
+//     this.balance = balance;
+//   }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
+
+// const ramAccount = new BankAccount("Ram", 6000);
+// ramAccount.deposit(6000);
+// const hariAccount = new BankAccount("Hari", 9000);
+// hariAccount.deposit(5000);
+// hariAccount.withdraw(2000);
+
+// console.log(ramAccount);
+// console.log(hariAccount);
+
+function BankAccount(customerName, balance) {
+  this.customerName = customerName;
+  this.accountNumber = Date.now();
+  this.balance = balance;
 }
 
-function calculateResult() {
-  const result = document.getElementById("result").value;
-  const calculatedResult = eval(result);
-  document.getElementById("result").value = calculatedResult;
-}
+BankAccount.prototype.deposit = function (amount) {
+  this.balance += amount;
+};
 
-function clearResult() {
-  document.getElementById("result").value = "";
-}
+BankAccount.prototype.withdraw = function (amount) {
+  this.balance -= amount;
+};
+
+const sitaAccount = new BankAccount("Sita", 8000);
+
+console.log(sitaAccount);
