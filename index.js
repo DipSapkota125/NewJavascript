@@ -851,20 +851,228 @@
 // console.log(ramAccount);
 // console.log(hariAccount);
 
-function BankAccount(customerName, balance) {
-  this.customerName = customerName;
-  this.accountNumber = Date.now();
-  this.balance = balance;
+// function BankAccount(customerName, balance) {
+//   this.customerName = customerName;
+//   this.accountNumber = Date.now();
+//   this.balance = balance;
+// }
+
+// BankAccount.prototype.deposit = function (amount) {
+//   this.balance += amount;
+// };
+
+// BankAccount.prototype.withdraw = function (amount) {
+//   this.balance -= amount;
+// };
+
+// function SavingAccount(customerName, balance) {
+//   BankAccount.call(this, customerName, balance);
+//   this.transactionLimit = 10000;
+// }
+
+// SavingAccount.prototype = Object.create(BankAccount.prototype);
+
+// SavingAccount.prototype.takePersonalAccount = function (amount) {
+//   console.log("Taking personal loan is :" + amount);
+// };
+
+// const sitaAccount = new SavingAccount("Sita", 8000);
+// const gitaAccount = new SavingAccount("Sita", 8000);
+// gitaAccount.takePersonalAccount(2000);
+
+// gitaAccount.deposit(6000);
+
+// console.log(gitaAccount);
+
+// class BankAccount {
+//   #balance;
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   setBalance(amount) {
+//     if (isNaN(amount)) {
+//       throw new Error("Invlaid input");
+//     }
+//     this.#balance = amount;
+//   }
+//   getBalance() {
+//     return this.#balance;
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   transactionLimit = 50000;
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+
+//   #calculateInterest(amount) {
+//     console.log("calculating interest");
+//   }
+
+//   takePersonalLoan(amount) {
+//     this.#calculateInterest(amount);
+//     console.log(`Taking personal loan is : ${amount}`);
+//   }
+// }
+
+// const ramAccount = new SavingAccount("Ram", 9000);
+// ramAccount.setBalance(6000); }
+// deposit(amount) {
+//   this.#balance += amount;
+// }
+
+// withdraw(amount) {
+//   this.#balance -= amount;
+// }
+
+//
+// ramAccount.deposit(5000);
+// ramAccount.calculateInterest(40000);
+// console.log(ramAccount);
+// console.log(ramAccount.getBalance());
+
+// class BankAccount {
+//   #balance = 0;
+//   constructor(customerName, balance = 0) {
+//     this.customerName = customerName;
+//     this.accountNumber = Date.now();
+//     this.#balance = balance;
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//   }
+
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//   }
+
+//   setBalance(amount) {
+//     this.#balance = amount;
+//   }
+//   getBalance(amount) {
+//     return this.#balance;
+//   }
+// }
+
+// class SavingAccount extends BankAccount {
+//   transactionSLimit = 50000;
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+
+//   #calculatingInterest(amount) {
+//     console.log("Calculating interest is :" + amount);
+//   }
+//   takePersonalLoan(amount) {
+//     this.#calculatingInterest(amount);
+//     console.log("Taking personal Loan is :" + amount);
+//   }
+// }
+
+// class CurrentAccount extends BankAccount {
+//   transactionSLimit = 10000;
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//   }
+//   takePersonalLoan(amount) {
+//     console.log("Taking personal Loan is :" + amount);
+//   }
+// }
+
+// const ramAccount = new BankAccount("ram", 6000);
+// ramAccount.#balance = 9000;
+// console.log(ramAccount);
+
+// class Profile {
+//   constructor(name, age, income) {
+//     this.name = name;
+//     this.age = age;
+//     this.income = income;
+//   }
+
+//   static SortByAge(user1, user2) {
+//     return user1.age - user2.age;
+//   }
+// }
+
+// const user1 = new Profile("ram", 34, 6000);
+// const user2 = new Profile("shyam", 30, 9000);
+// const user3 = new Profile("hari", 20, 7000);
+
+// const users = [user1, user2, user3];
+// users.sort(Profile.SortByAge);
+// console.log(users);
+
+//instance method
+
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
+//   calculateArea() {
+//     return Math.PI * this.radius * this.radius;
+//   }
+//   static compare(rad1, rad2) {
+//     return rad1.radius - rad2.radius;
+//   }
+
+//   static defaultRadius = 2;
+// }
+
+// const rad1 = new Circle(8);
+// const rad2 = new Circle(4);
+
+// console.log(rad1, rad2);
+// console.log(Circle.defaultRadius);
+// console.log(Circle.compare(rad1, rad2));
+// console.log(rad1.calculateArea());
+
+// class Profile {
+//   constructor(name, age, income) {
+//     this.name = name;
+//     this.age = age;
+//     this.income = income;
+//   }
+
+//   static sortByAge(user1, user2) {
+//     return user1.age - user2.age;
+//   }
+// }
+
+// const user1 = new Profile("Ram", 23, 5000);
+// const user2 = new Profile("shyam", 19, 9000);
+// const user3 = new Profile("Ram", 20, 6000);
+
+// const users = [user1, user2, user3];
+// users.sort(Profile.sortByAge);
+// console.log(users);
+
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  //instance method
+  calculateArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+
+  //static method
+  static compareByNumber(rad1, rad2) {
+    return rad1 - rad2;
+  }
+
+  //property
+  static defaultValue = 3;
 }
 
-BankAccount.prototype.deposit = function (amount) {
-  this.balance += amount;
-};
+const rad1 = new Circle(8);
+const rad2 = new Circle(5);
 
-BankAccount.prototype.withdraw = function (amount) {
-  this.balance -= amount;
-};
-
-const sitaAccount = new BankAccount("Sita", 8000);
-
-console.log(sitaAccount);
+console.log(rad1, rad2);
+console.log(Circle.defaultValue);
+console.log(Circle.compareByNumber(9, 5));
+console.log(rad1.calculateArea());
