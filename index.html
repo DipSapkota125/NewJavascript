@@ -8,21 +8,26 @@
     <link rel="stylesheet" type="text/css" href="./index.css" />
   </head>
   <body>
-    <form id="myForm">
-      <input type="text" id="customername" placeholder="enter customerName" />
-      <input type="text" id="balance" placeholder="enter balance" />
-      <button>Create Account</button>
-    </form>
-    <hr />
-    <form id="depositForm">
-      <input
-        type="number"
-        id="accountnumber"
-        placeholder="enter accountNumber"
-      />
-      <input type="number" id="amount" placeholder="amount balance" />
-      <button>deposit amount</button>
-    </form>
+    <div class="container">
+      <div class="weather">
+        <div class="weather1">17°</div>
+        <div class="weather2">
+          <p>Location</p>
+          <span>11:01 - Monday 2023-06-5</span>
+        </div>
+        <div class="weather3">
+          <p><img src="" alt="condition" /></p>
+          <span>Condition</span>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <form>
+        <input type="text" class="searchField" />
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+
     <script src="./index.js"></script>
   </body>
 </html>

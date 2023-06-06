@@ -1050,29 +1050,440 @@
 // users.sort(Profile.sortByAge);
 // console.log(users);
 
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
 
-  //instance method
-  calculateArea() {
-    return Math.PI * this.radius * this.radius;
-  }
+//instance method
+// calculateArea() {
+//   return Math.PI * this.radius * this.radius;
+// }
 
-  //static method
-  static compareByNumber(rad1, rad2) {
-    return rad1 - rad2;
-  }
+//static method
+// static compareByNumber(rad1, rad2) {
+//   return rad1 - rad2;
+// }
 
-  //property
-  static defaultValue = 3;
+//property
+//   static defaultValue = 3;
+// }
+
+// const rad1 = new Circle(8);
+// const rad2 = new Circle(5);
+
+// console.log(rad1, rad2);
+// console.log(Circle.defaultValue);
+// console.log(Circle.compareByNumber(9, 5));
+// console.log(rad1.calculateArea())
+
+// const y = 90;
+// console.log(y);
+// console.log(typeof y);
+// console.log(typeof String(y));
+// console.log(typeof y.toString());
+
+const greeting = "Hello World,Nepathya";
+const say = "  How is your Life  ";
+
+// console.log(greeting);
+// console.log(greeting.length);
+// console.log(greeting[0]);
+// console.log(greeting.replace("Hello", "How"));
+// console.log(greeting.charAt(8));
+// console.log(greeting.split(","));
+// console.log(greeting.concat(say));
+// console.log(say.trim());
+// console.log(greeting.toLowerCase("N"));
+// console.log(greeting.toUpperCase());
+// console.log(greeting.toLowerCase());
+// console.log(greeting.indexOf("o"));
+// console.log(greeting.lastIndexOf("h"));
+// console.log(greeting.endsWith("Nepathya"));
+// console.log(greeting.startsWith(" Hello"));
+// console.log(greeting.includes("Nepathya"));
+// console.log(greeting.substring(3, 7));
+// console.log(greeting.slice(3, 7));
+// console.log(greeting.substr(3, 5));
+// console.log(greeting.substring(3, 7));
+
+// let trimmed = "  Hello World  ".trim();
+// console.log(trimmed);
+
+// let email = "dipsapkota325@gmail.com";
+// let password = "9999999999";
+
+// if (email === "dipsapkota325@gmail.com" && password === "999999999") {
+//   console.log("Welcome to the world!");
+// } else {
+//   console.log("Invalid credentials!");
+// }
+
+// let grade;
+
+// if (grade === "D") {
+//   console.log("need to work hard");
+// } else if (grade === "A") {
+//   console.log("Excellent");
+// } else if (grade === "B") {
+//   console.log("Very good marks!");
+// } else if (grade === "C") {
+//   console.log("good marks");
+// } else {
+//   console.log("invalid grade!");
+// }
+
+// let x = prompt("Enter your number");
+// if (x > 15) {
+//   console.log("X is greater than 15!");
+// } else if (x > 5) {
+//   console.log("X is greater than 5 but not equal to 15!");
+// } else {
+//   console.log("X is not greater than 15!");
+// }
+
+// let weather = "cloudy";
+// if (weather === "sunny") {
+//   console.log("It's a beautiful day!");
+// } else if (weather === "cloudy") {
+//   console.log("It's a little bit day!");
+// } else if (weather === "rainy") {
+//   console.log("Aja pani paryo bhnae life damage!");
+// } else if (weather === "winter") {
+//   console.log("audae xa mausam!");
+// } else {
+//   console.log("invalid!");
+// }
+
+// let i = 8;
+// let j = 7;
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// const result = sum(i, j);
+// let role = prompt("Enter your role");
+// switch (role) {
+//   case "admin":
+//     console.log("You have full access to this system ");
+//     break;
+//   case "manager":
+//     console.log("You have limited access to this system ");
+//     break;
+//   case "user":
+//     console.log("You have basic access to this system ");
+//     break;
+
+//   default:
+//     console.log("Unknown role.Call the administrator");
+//     break;
+// }
+
+// for (let i = 0; i <=10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// const userInput = prompt("Enter your number");
+// const number = Number(userInput);
+
+// if (isNaN(number)) {
+//   alert("Please enter valid number");
+// } else {
+//   console.log("Even number is :");
+
+//   for (let i = 0; i <= number; i++) {
+//     if (i % 2 === 0) {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// const arr = [5, 3, 4, 6, 9, 2];
+
+// function Calculate(arr = [], callBack) {
+//   let ans = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = callBack(arr[i]);
+//     ans.push(element);
+//   }
+//   console.log(ans);
+// }
+
+// Calculate(arr, (a) => a * 10);
+// Calculate(arr, (a) => a / 10);
+
+// function Divide(arr = []) {
+//   let ans = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     ans.push(arr[i] / 10);
+//   }
+//   console.log(ans);
+// }
+
+// Divide(arr);
+
+// let a = new Promise((resolve, reject) => {
+//   let success = false;
+//   if (success) resolve("Promise fulFilled");
+//   else reject("Technical error");
+// });
+
+// a.then((parameter) => {
+//   console.log(parameter);
+// }).catch((error) => {
+//   console.log(error);
+// });
+
+// let arr = [];
+// const fetchedData = (arr = []) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       arr.push({ name: "ram" });
+//       if (arr.length > 0) resolve("Data fetched");
+//       else reject("Some technical error");
+//     }, 2000);
+//   });
+// };
+
+// fetchedData(arr)
+//   .then((message) => console.log(message))
+//   .catch((error) => console.log(error));
+
+//loop
+// for (let i = 0; i < 10; i++) {
+//   console.log(Math.random());
+// }
+
+// for (let i = 0; i < 10; i++) {
+//   console.log("Iteration:", i);
+// }
+
+//event numbers
+
+// let arr = [];
+// const fetchedData = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       arr.push({ name: "Ram", age: 23 });
+//       if (arr.length > 0) resolve("Data fetched");
+//       else reject("Some technical error!");
+//     }, 2000);
+//   });
+// };
+
+// fetchedData()
+//   .then((message) => console.log(message))
+//   .catch((error) => console.log(error))
+//   .finally(() => console.log("Dubai tira mah"));
+
+// const url = "https://api.zippopotam.us/us/33162";
+// const h1 = document.querySelector("h1");
+// const h2 = document.querySelector("h2");
+// const h3 = document.querySelector("h3");
+
+// const fetchedData = () => {
+//   fetch(url)
+//     .then((res) => res.json())
+//     .then((data) => (h1.innerHTML = data.fact))
+//     .catch((error) => console.log(error));
+// };
+
+// fetchedData();
+
+// const fetchedData = async () => {
+//   try {
+//     const res = await fetch(url);
+//     const data = await res.json();
+
+//     const { country, places } = data;
+//     places.map(
+//       (value, index) => (
+//         (h2.innerHTML = value.longitude), (h3.innerHTML = value.state)
+//       )
+//     );
+
+//     console.log(data.places);
+//     h1.innerHTML = country;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// fetchedData();
+
+// const temperatureField = document.querySelector(".weather1");
+// const cityField = document.querySelector(".weather2 p");
+// const dateField = document.querySelector(".weather2 span");
+// const emojiField = document.querySelector(".weather3 img");
+// const weatherField = document.querySelector(".weather3 span");
+// const searchField = document.querySelector(".searchField ");
+// const form = document.querySelector("form");
+
+// let target = "Kathmandu";
+// const fetchedData = async (target) => {
+//   try {
+//     const url = `https://api.weatherapi.com/v1/current.json?key=5b9c3d315a1342a18ea122531232901&q=${target}`;
+//     const res = await fetch(url);
+//     const data = await res.json();
+//     console.log(data);
+
+//     const {
+//       current: {
+//         temp_c,
+//         condition: { text, icon },
+//       },
+
+//       location: { name, localtime },
+//     } = data;
+
+//     updatedDom(temp_c, name, icon, text, localtime);
+//   } catch (error) {
+//     alert("Location not found!");
+//   }
+// };
+
+// function updatedDom(temperature, city, emoji, text, time) {
+//   temperatureField.innerText = temperature;
+//   cityField.innerText = city;
+//   emojiField.src = emoji;
+//   weatherField.innerText = text;
+//   const exactTime = time.split(" ")[1];
+//   const exactDate = time.split(" ")[0];
+
+//   const exactDay = getDayFullName(new Date(exactDate).getDate());
+//   dateField.innerText = `${exactTime} - ${exactDay} ${exactDate}`;
+// }
+
+// fetchedData(target);
+
+// const search = (e) => {
+//   e.preventDefault();
+
+//   target = searchField.value;
+//   fetchedData(target);
+// };
+
+// form.addEventListener("submit", search);
+
+// function getDayFullName(num) {
+//   switch (num) {
+//     case 0:
+//       return "Sunday";
+//     case 1:
+//       return "Monday";
+//     case 2:
+//       return "Tuesday";
+//     case 3:
+//       return "Wednesday";
+//     case 4:
+//       return "Thursday";
+//     case 5:
+//       return "Friday";
+//     case 6:
+//       return "Saturday";
+
+//     default:
+//       return "Invalid!";
+//   }
+// }
+
+// const a = Math.round(4.9);
+// console.log(a);
+
+// const a = Math.floor(4.2);
+// console.log(a);
+
+// const a = Math.ceil(4.1);
+// console.log(a);
+
+// const a = Math.trunc(4.9);
+// console.log(a);
+
+// const a = Math.sign(-4);
+// console.log(a);
+
+// const a = Math.pow(2, 4);
+// console.log(a);
+
+// const a = Math.sqrt(625);
+// console.log(a);
+
+const temperatureFiled = document.querySelector(".weather1");
+const cityFiled = document.querySelector(".weather2 p");
+const dateFiled = document.querySelector(".weather2 span");
+const emojiFiled = document.querySelector(".weather3 img");
+const weatherFiled = document.querySelector(".weather3 span");
+const input = document.querySelector(".searchField");
+const form = document.querySelector("form");
+
+let target = "kathmandu";
+const fetchedData = async (target) => {
+  try {
+    const res = await fetch(
+      `https://api.weatherapi.com/v1/current.json?key=5b9c3d315a1342a18ea122531232901&q=${target}`
+    );
+
+    const data = await res.json();
+
+    const {
+      current: {
+        temp_c,
+        condition: { text, icon },
+      },
+      location: { name, localtime },
+    } = data;
+
+    manipulateDom(temp_c, name, icon, text, localtime);
+  } catch (error) {
+    alert(error);
+  }
+};
+
+fetchedData(target);
+
+function manipulateDom(temp, city, emoji, text, time) {
+  temperatureFiled.innerHTML = temp;
+  cityFiled.innerHTML = city;
+  emojiFiled.src = emoji;
+  weatherFiled.innerHTML = text;
+
+  const exactTime = time.split(" ")[1];
+  const exactDate = time.split(" ")[0];
+
+  const currentDate = new Date();
+  const currentDay = getTodaysDay(currentDate.getDay());
+
+  dateFiled.innerText = `${exactTime} - ${currentDay} ${exactDate}`;
 }
 
-const rad1 = new Circle(8);
-const rad2 = new Circle(5);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  target = input.value;
+  fetchedData(target);
+});
 
-console.log(rad1, rad2);
-console.log(Circle.defaultValue);
-console.log(Circle.compareByNumber(9, 5));
-console.log(rad1.calculateArea());
+function getTodaysDay(num) {
+  switch (num) {
+    case 0:
+      return "Sunday";
+    case 1:
+      return "Monday";
+    case 2:
+      return "Tuesday";
+    case 3:
+      return "Wednesday";
+    case 4:
+      return "Thursday";
+    case 5:
+      return "Friday";
+    case 6:
+      return "Saturday";
+
+    default:
+      return "Invalid";
+  }
+}
